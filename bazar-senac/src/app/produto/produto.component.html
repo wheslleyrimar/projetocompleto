@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="row mt-5 mb-5">
+
+    <div class="col-md-12">
+
+      <a class="btn btn-outline-info justify-content-center mb-3" routerLink="/cadproduto">Cadastrar Novo Produto</a>
+      <h1 class="text-monospace text-center mb-5">Produtos</h1>
+
+      <div class="container">
+        <div class="card mb-4" *ngFor="let item of listaProdutos">
+
+          <div class="card-header">
+            <h5 class="card-title">{{ item.nome }}</h5>
+          </div>
+
+          <div class="card-body">
+            <p class="card-text">{{ item.descricao }}</p>
+            <p class="card-text">{{ item.tamanho }}</p>
+            <p class="card-text">{{ item.cor }}</p>
+          </div>
+        </div>
+        <div class="card-footer pb-0 pt-3">
+          <jw-pagination [items]="items" (changePage)="onChangePage($event)"></jw-pagination>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</div>

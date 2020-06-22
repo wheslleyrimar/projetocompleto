@@ -1,0 +1,18 @@
+{
+  "produtos": [
+    {
+      "id": 1,
+      "nome": "Calça Jeans",
+      "descricao": "Produto em ótimo estado",
+      "tamanho": "42",
+      "cor": "Preta"
+    },
+    {
+      "id": 2,
+      "nome": "Camiseta",
+      "descricao": "Camiseta usada apenas 1 vez",
+      "tamanho": "M",
+      "cor": "Verde"
+    }
+  ]
+}
