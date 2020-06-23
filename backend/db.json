@@ -13,6 +13,13 @@
       "descricao": "Camiseta usada apenas 1 vez",
       "tamanho": "M",
       "cor": "Verde"
+    },
+    {
+      "nome": "Teste",
+      "descricao": "Teste Teste",
+      "tamanho": "M",
+      "cor": "Azul",
+      "id": 3
     }
   ]
 }

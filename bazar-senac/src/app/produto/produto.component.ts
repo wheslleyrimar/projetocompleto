@@ -11,6 +11,8 @@ export class ProdutoComponent implements OnInit {
 
   items = [];
   listaProdutos: Produto[];
+  reverse = true;
+  key = 'id';
 
 
   constructor(private produtoService: ProdutoService) { }

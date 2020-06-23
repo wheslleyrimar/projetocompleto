@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Produto } from '../model/Produto';
 import { ProdutoService } from '../service/produto.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cadproduto',
@@ -11,15 +12,17 @@ export class CadprodutoComponent implements OnInit {
 
   produto: Produto = new Produto();
 
-  constructor(private produtoService: ProdutoService) { }
+  constructor(private produtoService: ProdutoService, private router: Router) { }
 
-  ngOnInit(){
+  ngOnInit() {
 
   }
-  cadastrarProduto(){
-    this.produtoService.postProduto(this.produto).subscribe((resp: Produto) =>{
+
+  cadastrarProduto() {
+    this.produtoService.postProduto(this.produto).subscribe((resp: Produto) => {
       this.produto = resp;
       this.produto = new Produto();
+      this.router.navigate(['/produto']);
     });
   }
 

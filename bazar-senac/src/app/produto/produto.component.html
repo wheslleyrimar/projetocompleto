@@ -7,7 +7,7 @@
       <h1 class="text-monospace text-center mb-5">Produtos</h1>
 
       <div class="container">
-        <div class="card mb-4" *ngFor="let item of listaProdutos">
+        <div class="card mb-4" *ngFor="let item of listaProdutos | orderBy : key : reverse">
 
           <div class="card-header">
             <h5 class="card-title">{{ item.nome }}</h5>
